@@ -51,7 +51,7 @@ pipeline {
 
         stage('ArgoCD Sync') {
             steps {
-                sh 'argocd app sync node-app'  // optional: use webhook for auto-sync
+                sh 'argocd app sync node-app'  // optional: use webhook for auto-syncing
             }
         }
     }
