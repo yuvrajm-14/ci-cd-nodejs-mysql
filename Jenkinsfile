@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        VAULT_ADDR = 'http://localhost:8200'  // Or your Vault IP
-        DOCKER_IMAGE = "your-dockerhub-username/node-app:latest"
+        VAULT_ADDR = 'http://127.0.0.1:8200'  // Or your Vault IP
+        DOCKER_IMAGE = "yuvraj4/node-app:latest"
     }
 
     stages {
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                git 'https://github.com/yuvrajm-14/ci-cd-nodejs-mysql.git'
             }
         }
 
